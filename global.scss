@@ -1,0 +1,165 @@
+@import "vars";
+body,
+html {
+    background: gray(1);
+    $col: #ff0;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    width: 100%;
+}
+body[dark] {
+    background: gray(8);
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: $screen-large) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: $screen-medium) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: $screen-small) {
+    html {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: $screen-tiny) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: $screen-phone) {
+    html {
+        font-size: 11px;
+    }
+}
+
+@for $i from 1 to 7 {
+    h#{$i} {
+        margin: (7-$i) * 0.3rem;
+        font-size: (7-$i) * 0.7rem;
+    }
+}
+
+h3 {
+    font-weight: 500;
+}
+
+h4,
+h5,
+h6 {
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+button[blue] {
+    @include appearance(none);
+    transition: 0.2s;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    font-size: 1rem;
+    background: blue();
+    color: gray(0);
+    padding: 0.6rem 1rem;
+    font-weight: bold;
+    border-radius: 0.2rem;
+    border: 1px solid blue();
+    box-shadow: shadow(3, 0.15, 0);
+    &:hover {
+        background: #0000;
+        color: blue();
+        box-shadow: glow(blue(), 15px, 0.2);
+    }
+    margin: 1rem 0.5rem;
+}
+button[small] {
+    padding: 0.3rem 0.5rem;
+    margin: 0.5rem 0.25rem;
+}
+button[black] {
+    background: gray(9);
+    border-color: gray(9);
+    &:hover {
+        color: gray(9);
+        background: #0000;
+        box-shadow: glow(blue(1), 15px, 0.2);
+    }
+}
+button[white] {
+    box-shadow: shadow(3, 0.05, 0);
+    background: gray(0);
+    border-color: gray(2);
+    color: gray();
+    &:hover {
+        color: gray(8);
+        border-color: gray();
+        background: white;
+        box-shadow: glow(blue(1), 15px, 0.2);
+    }
+}
+body[dark] {
+    button {
+        box-shadow: shadow(5, 0.2, 0);
+    }
+    button[blue] {
+        &:hover {
+            box-shadow: glow(blue(), 15px, 0.1);
+        }
+    }
+    button[white] {
+        background: #0000;
+        border-color: gray(7);
+        color: gray();
+        &:hover {
+            color: gray(2);
+            border-color: gray(4);
+            box-shadow: glow(blue(2), 15px, 0.05);
+        }
+    }
+    button[black] {
+        box-shadow: shadow(5, 0.05, 0);
+        background: mix(gray(7), gray(8));
+        color: gray(4);
+        border-color: gray(7);
+        &:hover {
+            background: gray(7);
+            color: gray(2);
+            box-shadow: glow(blue(2), 15px, 0.05);
+        }
+    }
+}
+
+a[styled] {
+    transition: 0.2s;
+    color: sky();
+    &:hover {
+        color: sky(4);
+    }
+}
