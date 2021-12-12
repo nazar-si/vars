@@ -821,3 +821,11 @@ $screen-phone: 400px;
     -o-appearance: $value;
     appearance: $value;
 }
+
+@mixin text-gradient($color1, $color2, $dir: 30deg) {
+    background-clip: text;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    color: #0000;
+    background-image: linear-gradient($dir, $color1, $color2);
+}
