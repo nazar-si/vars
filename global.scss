@@ -57,11 +57,26 @@ a {
     }
 }
 
+p,
+div,
+span {
+    color: gray(6);
+    font-size: 1.2rem;
+}
+body[dark] {
+    p,
+    div,
+    span {
+        color: gray(4);
+    }
+}
+
 @for $i from 1 to 7 {
     h#{$i} {
         transition: 0.3s;
         margin: (7-$i) * 0.3rem;
         font-size: (7-$i) * 0.7rem;
+        color: mix(gray(8), gray(7));
     }
 }
 
@@ -78,19 +93,6 @@ h6 {
 a {
     text-decoration: none;
     color: inherit;
-}
-p,
-div,
-span {
-    color: gray(6);
-    font-size: 1.2rem;
-}
-body[dark] {
-    p,
-    div,
-    span {
-        color: gray(4);
-    }
 }
 
 button,
@@ -141,6 +143,14 @@ button[white] {
     }
 }
 body[dark] {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: mix(gray(2), gray(3));
+    }
     button {
         box-shadow: shadow(5, 0.2, 0);
     }

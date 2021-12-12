@@ -69,11 +69,25 @@ a {
   }
 }
 
+p,
+div,
+span {
+  color: #52525b;
+  font-size: 1.2rem;
+}
+
+body[dark] p,
+body[dark] div,
+body[dark] span {
+  color: #a1a1aa;
+}
+
 h1 {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   margin: 1.8rem;
   font-size: 4.2rem;
+  color: #333338;
 }
 
 h2 {
@@ -81,6 +95,7 @@ h2 {
   transition: 0.3s;
   margin: 1.5rem;
   font-size: 3.5rem;
+  color: #333338;
 }
 
 h3 {
@@ -88,6 +103,7 @@ h3 {
   transition: 0.3s;
   margin: 1.2rem;
   font-size: 2.8rem;
+  color: #333338;
 }
 
 h4 {
@@ -95,6 +111,7 @@ h4 {
   transition: 0.3s;
   margin: 0.9rem;
   font-size: 2.1rem;
+  color: #333338;
 }
 
 h5 {
@@ -102,6 +119,7 @@ h5 {
   transition: 0.3s;
   margin: 0.6rem;
   font-size: 1.4rem;
+  color: #333338;
 }
 
 h6 {
@@ -109,6 +127,7 @@ h6 {
   transition: 0.3s;
   margin: 0.3rem;
   font-size: 0.7rem;
+  color: #333338;
 }
 
 h3 {
@@ -124,19 +143,6 @@ h6 {
 a {
   text-decoration: none;
   color: inherit;
-}
-
-p,
-div,
-span {
-  color: #52525b;
-  font-size: 1.2rem;
-}
-
-body[dark] p,
-body[dark] div,
-body[dark] span {
-  color: #a1a1aa;
 }
 
 button,
@@ -202,6 +208,15 @@ button[white]:hover {
   background: white;
   -webkit-box-shadow: 0 0 15px rgba(219, 234, 254, 0.2);
           box-shadow: 0 0 15px rgba(219, 234, 254, 0.2);
+}
+
+body[dark] h1,
+body[dark] h2,
+body[dark] h3,
+body[dark] h4,
+body[dark] h5,
+body[dark] h6 {
+  color: #dcdce0;
 }
 
 body[dark] button {
