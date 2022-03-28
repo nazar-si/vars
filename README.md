@@ -1,4 +1,4 @@
-# Vars
+## vars.scss
 
 So, this is the repo for my style system, that consists of functions and mixins for scss, that can be easily used in other scss/sass document. 
 
@@ -52,3 +52,6 @@ And function for text gradient that can be called:
 ```scss
 @include text-gradient($color1, $color2, ?$dir: 30deg)
 ```
+
+## globals.scss
+This is the collection of styles I usually apply to buttons, links, headers in my projects.
