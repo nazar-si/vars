@@ -8,12 +8,14 @@ $font: "Inter", sans-serif;
 $font-raleway: "Raleway", sans-serif;
 $font-code: Consolas, monaco, monospace;
 $transition: cubic-bezier(0.8, -0.27, 0.2, 1.27);
+$shadow: 0 4px 20px #0001;
 $screen-huge: 1440px;
 $screen-large: 1280px;
 $screen-medium: 1024px;
 $screen-small: 768px;
 $screen-tiny: 600px;
 $screen-phone: 400px;
+
 @mixin text-gradient($gradient) {
     background: $gradient;
     -moz-background-clip: text;
@@ -761,17 +763,20 @@ $screen-phone: 400px;
     width: 90%;
 }
 
-@mixin container-large {
+@mixin container-large($max: 100%, $min: 0) {
     width: 75%;
     @media screen and (max-width: $screen-tiny) {
         width: 90%;
     }
+    min-width: $min;
+    max-width: $max;
 }
 
 @mixin container-medium {
-    width: 50%;
-    @media screen and (max-width: $screen-tiny) {
-        width: 75%;
+    width: 75%;
+    max-width: $screen-small;
+    @media screen and (min-width: $screen-large) {
+        max-width: $screen-medium;
     }
     @media screen and (max-width: $screen-phone) {
         width: 90%;
