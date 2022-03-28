@@ -1,6 +1,6 @@
 # Vars
 
-So, this is the repo for my style system, that consists of functions and mixins for scss, that can be easeally used in other scss/sass document. 
+So, this is the repo for my style system, that consists of functions and mixins for scss, that can be easily used in other scss/sass document. 
 
 Color scheme based of the one from Tailwind. Colors can be accessed via function:
 ```scss
