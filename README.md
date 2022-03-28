@@ -18,7 +18,7 @@ Here `$int` - is intensity of the color and optional parameter `$alpha` controls
 Also there are some special color functions that can be called `colorname-after()` or `colorname-before()` that returns previous or next complement of the color in palet.
 For example: `cyan-after()` returns the same color as `blue()`.
 
-Also there are some functions for containers (blocks with automatically managed width) that may be applied to any calss via:
+Also there are some functions for containers (blocks with automatically managed width) that may be applied to any class via:
 ```scss
 @include container-small;
 @include container-medium;
